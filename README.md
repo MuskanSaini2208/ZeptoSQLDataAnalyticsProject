@@ -4,7 +4,7 @@
 
 ## 📌 Project Overview
 
-This project simulates how Data Analysts in the e-commerce and retail industry use SQL to analyze, clean, and extract business insights from inventory data.MUsing a real-world dataset scraped from Zepto's product catalog, the project demonstrates the complete analytics workflow—from database creation and data cleaning to exploratory data analysis (EDA) and business intelligence reporting.
+This project simulates how Data Analysts in the e-commerce and retail industry use SQL to analyze, clean, and extract business insights from inventory data. Using a real-world dataset scraped from Zepto's product catalog, the project demonstrates the complete analytics workflow—from database creation and data cleaning to exploratory data analysis (EDA) and business intelligence reporting.
 
 The objective is to transform raw inventory data into meaningful insights that support pricing, inventory management, and revenue-related decisions.
 
