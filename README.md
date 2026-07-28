@@ -27,16 +27,16 @@ Each record represents a unique *SKU (Stock Keeping Unit)*. The same product may
 
 Columns:
 
-sku_id: Unique identifier for each product entry (Synthetic Primary Key)
-name: Product name as it appears on the app
-category: Product category like Fruits, Snacks, Beverages, etc.
-mrp: Maximum Retail Price (originally in paise, converted to ₹)
-discountPercent: Discount applied on MRP
-discountedSellingPrice: Final price after discount (also converted to ₹)
-availableQuantity: Units available in inventory
-weightInGms: Product weight in grams
-outOfStock: Boolean flag indicating stock availability
-quantity: Number of units per package (mixed with grams for loose produce)
+- sku_id: Unique identifier for each product entry (Synthetic Primary Key)
+- name: Product name as it appears on the app
+- category: Product category like Fruits, Snacks, Beverages, etc.
+- mrp: Maximum Retail Price (originally in paise, converted to ₹)
+- discountPercent: Discount applied on MRP
+- discountedSellingPrice: Final price after discount (also converted to ₹)
+- availableQuantity: Units available in inventory
+- weightInGms: Product weight in grams
+- outOfStock: Boolean flag indicating stock availability
+- quantity: Number of units per package (mixed with grams for loose produce)
 
 
 # 📈 Project Workflow
@@ -160,8 +160,3 @@ Through this project, I gained hands-on experience in:
 - Add profitability and margin calculations
 - Integrate PostgreSQL with Python for advanced analytics
 
-## 👨‍💻 Author
-
-**Muskan Saini**
-
-Aspiring Data Analyst | SQL | Excel | Python | Power BI | AI
