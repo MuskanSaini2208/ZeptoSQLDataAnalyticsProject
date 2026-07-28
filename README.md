@@ -1,5 +1,3 @@
-# ZeptoAnalysis
-
 # 🛒 Zepto SQL Data Analytics Project
 
 ## 📌 Project Overview
