@@ -95,21 +95,69 @@ discountedSellingPrice = discountedSellingPrice/100.0;
 SELECT mrp, discountedSellingPrice FROM zepto;
 
 
---Q1.Find the top 10 best-value products based on the discount percentage.
 
+--Q1.Find the top 10 best-value products based on the discount percentage.
+SELECT name, category, mrp, discountedSellingPrice, discountPercent
+FROM zepto
+ORDER BY discountPercent DESC 
+limit 10;
+
+ 
 --Q2.What are the Products with High MRP but Out of Stock
+SELECT name, category, mrp 
+FROM zepto
+WHERE outOfStock = TRUE
+ORDER BY mrp DESC 
+LIMIT 1;
+
 
 --Q3.Calculate Estimated Revenue for each category
+SELECT category,
+SUM(discountedSellingPrice * availableQuantity) AS estimated_revenue
+FROM zepto 
+GROUP BY category;
+
 
 --Q4.Find all products where MRP is greater than ₹500 and discount is less than 10%.
+SELECT name, category, mrp, discountPercent
+FROM zepto 
+WHERE mrp>500 AND discountPercent<10;
+
 
 --Q5.Identify the top 5 categories offering the highest average discount percentage.
+SELECT category, 
+		AVG(discountPercent) AS avg_discount
+FROM zepto
+GROUP BY category
+ORDER BY avg_discount DESC
+LIMIT 5;
+
 
 --Q6.Find the top 5 rarest products above 100g and sort by best value.
+SELECT name, category, weightInGms, availableQuantity, discountPercent
+FROM zepto
+WHERE weightInGms >100
+ORDER BY availableQuantity ASC,
+			discountPercent DESC
+LIMIT 5;
+
 
 --Q7.Group the products into categories like Low, Medium, Bulk.
+SELECT name, category, weightInGms,
+CASE
+	WHEN weightInGms <= 500 THEN 'Low'
+	WHEN weightInGms <= 1000 THEN 'Medium'
+	ELSE 'Bulk'
+END AS Weight_Category
+FROM zepto;
+
 
 --Q8.What is the Total Inventory Weight Per Category
+SELECT category, 
+		SUM(weightInGms*availableQuantity) AS Total_Inventory_Weight
+FROM zepto
+GROUP BY category
+ORDER BY Total_Inventory_Weight DESC;
 
 
 
